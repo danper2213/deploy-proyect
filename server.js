@@ -9,7 +9,7 @@ const app = express();
 app.use(express.static(__dirname + '/dist/deploy-proyect'));
 
 app.get('/*', function(req,res) {    
-    res.sendFile(path.join(__dirname));
+    res.sendFile(path.join(__dirname + '/dist/deploy-proyect/index.html' ));
 });
 
 const server = http.createServer(app);
